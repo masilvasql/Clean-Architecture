@@ -1,5 +1,3 @@
-import { v4 } from "uuid";
-import Customer from "../../../domain/customer/entity/customer";
 import Address from "../../../domain/customer/value-object/address";
 import UpdateCustomerUseCase from "./update.customer.usecase";
 import CustomerFactory from "../../../domain/customer/factory/customer.factory";
@@ -36,7 +34,7 @@ describe("Update Customer UNIT TEST", () => {
     it("should update a customer", async ()=>{
         const customerRepository = MockRepository();
         const customerUpdateUseCase = new UpdateCustomerUseCase(customerRepository);
-        
+
         const output = await customerUpdateUseCase.execute(input);
 
         expect(output).toEqual(input)
