@@ -1,6 +1,5 @@
 import CustomerFactory from "../../../domain/customer/factory/customer.factory"
 import Address from "../../../domain/customer/value-object/address"
-import { InputListCustomerDto } from "./findAll.customer.dto";
 import FindAllCustomerUseCase from "./findAll.customer.usecase";
 
 

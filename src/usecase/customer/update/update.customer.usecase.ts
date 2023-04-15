@@ -14,7 +14,7 @@ export default class UpdateCustomerUseCase {
 
         const customer = await this.customerRepository.find(input.id);
         customer.changeName(input.name);
-        customer.changeAddress(new Address(input.address.street, input.address.number, input.address.zip, input.address.city, input.address.country))
+        customer.changeAddress(new Address(input.address.street, input.address.number, input.address.city,  input.address.zip, input.address.country))
 
         if(!customer){
             throw new Error("Customer not found")
