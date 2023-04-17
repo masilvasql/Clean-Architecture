@@ -1,5 +1,5 @@
 import ProductRepositoryInterface from "../../../domain/product/repository/product-repository.interface";
-import { OutputFindProductDto } from "./find.product.dto";
+import { InputFindProductDto, OutputFindProductDto } from "./find.product.dto";
 
 export class FindProductUseCase{
     private productRepository: ProductRepositoryInterface;
@@ -8,8 +8,8 @@ export class FindProductUseCase{
         this.productRepository = productRepository;
     }
 
-    async execute(id: string): Promise<OutputFindProductDto> {
-        const product = await this.productRepository.find(id);
+    async execute(input: InputFindProductDto): Promise<OutputFindProductDto> {
+        const product = await this.productRepository.find(input.id);
 
         const output: OutputFindProductDto = {
             id: product.id,

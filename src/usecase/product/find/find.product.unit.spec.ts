@@ -1,4 +1,5 @@
 import ProductFactory from "../../../domain/product/factory/product.factory";
+import { InputFindProductDto } from "./find.product.dto";
 import { FindProductUseCase } from "./find.product.usecase";
 
 
@@ -19,7 +20,10 @@ describe("UNIT TEST: Find Product", () => {
     it ("should find a product", async () => {
         const productRepository = MockRepository();
         const useCase = new FindProductUseCase(productRepository);
-        const output = await useCase.execute(input.id);
+        const inputDto: InputFindProductDto  = {
+            id: input.id
+        }
+        const output = await useCase.execute(inputDto);
         expect(output).toEqual({
             id:input.id,
             name:input.name,

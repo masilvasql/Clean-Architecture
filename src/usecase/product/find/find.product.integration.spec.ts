@@ -4,6 +4,7 @@ import ProductRepository from "../../../ifrastructure/product/repository/sequeli
 import ProductFactory from "../../../domain/product/factory/product.factory";
 import CreateProductUseCase from "../create/create.product.usecase";
 import { FindProductUseCase } from "./find.product.usecase";
+import { InputFindProductDto } from "./find.product.dto";
 
 const product = ProductFactory.create("A", "Produto1", 12.99);
 
@@ -35,7 +36,10 @@ describe("INTEGRATION TEST Find Product Use Case", () => {
         const outputCreate = await useCaseCreate.execute(product);
 
         const useCaseFind = new FindProductUseCase(productRepository);
-        const outputFind = await useCaseFind.execute(outputCreate.id);
+        const input : InputFindProductDto ={
+            id: outputCreate.id
+        }
+        const outputFind = await useCaseFind.execute(input);
 
         expect(outputFind).toEqual({
             id: expect.any(String),
