@@ -28,7 +28,7 @@ describe('Test Find Customer Use Case', () => {
     });
 
 
-    it("should fin a customer", async () => {
+    it("should find a customer", async () => {
 
 
         const customer = new Customer("123", "John")
