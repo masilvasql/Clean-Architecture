@@ -1,6 +1,6 @@
 import { Sequelize } from "sequelize-typescript";
-import CustomerModel from "../../../ifrastructure/customer/repository/sequelize/customer.model";
-import CustomerRepository from "../../../ifrastructure/customer/repository/sequelize/customer.repository";
+import CustomerModel from "../../../infrastructure/customer/repository/sequelize/customer.model";
+import CustomerRepository from "../../../infrastructure/customer/repository/sequelize/customer.repository";
 import CustomerFactory from "../../../domain/customer/factory/customer.factory";
 import Address from "../../../domain/customer/value-object/address";
 import UpdateCustomerUseCase from "./update.customer.usecase";

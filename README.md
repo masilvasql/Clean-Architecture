@@ -64,3 +64,6 @@ Codigo :
         }
     }
 ```
+
+# E2E - End To End
+Instalado a lib ```supertest```

@@ -1,7 +1,7 @@
 import { Sequelize } from "sequelize-typescript";
-import ProductModel from "../../../ifrastructure/product/repository/sequelize/product.model";
+import ProductModel from "../../../infrastructure/product/repository/sequelize/product.model";
 import ProductFactory from "../../../domain/product/factory/product.factory";
-import ProductRepository from "../../../ifrastructure/product/repository/sequelize/product.repository";
+import ProductRepository from "../../../infrastructure/product/repository/sequelize/product.repository";
 import CreateProductUseCase from "./create.product.usecase";
 
 let input = ProductFactory.create("A", "Produto1", 12.99);

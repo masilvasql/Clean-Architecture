@@ -1,6 +1,6 @@
 import { v4 } from "uuid"
 import Customer from "../../../domain/customer/entity/customer"
-import CustomerRepository from "../../../ifrastructure/customer/repository/sequelize/customer.repository"
+import CustomerRepository from "../../../infrastructure/customer/repository/sequelize/customer.repository"
 import Address from "../../../domain/customer/value-object/address";
 import FindCustomerUseCase from "../find/find.customer.usecase";
 import CreateCustomerUseCase from "./create.customer.usecase";
