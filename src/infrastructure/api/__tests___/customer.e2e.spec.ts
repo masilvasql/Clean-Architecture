@@ -23,7 +23,7 @@ describe("E2E test for Customer", () => {
                     country: "Country 1"
                 }
             });
-            console.log(response.body)
+
         expect(response.status).toBe(201)
         expect(response.body.name).toBe("John Doe")
         expect(response.body.address.street).toBe("Street 1")
@@ -56,7 +56,7 @@ describe("E2E test for Customer", () => {
                     country: "Country 1"
                 }
             });
-            console.log(response.body)
+            
         expect(response.status).toBe(201)
 
         const response2 = await request(app)
