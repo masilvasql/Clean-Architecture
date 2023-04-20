@@ -4,12 +4,12 @@ import Customer from "./customer";
 describe("Customer unit tests", () => {
 
     it("should throw error when Id is empty", () => {
-        expect(() => new Customer("", "John")).toThrowError("Id is required");
+        expect(() => new Customer("", "John")).toThrowError("Customer: Id is required");
     });
 
 
     it("should throw error when Name is empty", () => {
-        expect(() => new Customer("1", "")).toThrowError("Name is required");
+        expect(() => new Customer("1", "")).toThrowError("Customer: Name is required");
     })
 
     it("should change name", () => {
@@ -42,7 +42,8 @@ describe("Customer unit tests", () => {
     })
 
     it("should thrrow error when change name to empty", () => {
-        expect(() => new Customer("1", "John").changeName("")).toThrowError("Name is required")
+        
+        expect(() => new Customer("1", "John").changeName("")).toThrowError("Customer: Name is required");
     })
 
     it("should throw error when activate customer without address", () => {
