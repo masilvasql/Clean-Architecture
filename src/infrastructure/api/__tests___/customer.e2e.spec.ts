@@ -71,7 +71,7 @@ describe("E2E test for Customer", () => {
                     country: "Country 1"
                 }
             });
-            console.log(response.body)
+
         expect(response.status).toBe(201)
 
         const response3 = await request(app)
